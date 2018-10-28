@@ -7,7 +7,7 @@
     
   
 
-            <form action = "{{url_for('archivos')}}" method="POST" class="row">
+            <form action = "{{url_for('archivos')}}" method="POST" class="row" enctype = "multipart/form-data">
 
             <!-- <button class="btn btn-dark col-md-3 mx-auto my-3 " id='button_ingresar_archivos' >Ingresar Aportes & Deducciones</button> -->
             <input type='file' id="getFile" name='file'  multiple="multiple">
@@ -21,15 +21,15 @@
         
 <script>
 
-// var button_ingresar_archivos = document.getElementById("button_ingresar_archivos");
-let file_uploader = document.getElementById("getFile");
-// button_ingresar_archivos.addEventListener("click",function(){
-//     file_uploader.click();
-// });
+// // var button_ingresar_archivos = document.getElementById("button_ingresar_archivos");
+// let file_uploader = document.getElementById("getFile");
+// // button_ingresar_archivos.addEventListener("click",function(){
+// //     file_uploader.click();
+// // });
 
-file_uploader.addEventListener("change",function(){
-    document.getElementById("text-hidden").value = JSON.stringify(file_uploader.files);
-});
+// file_uploader.addEventListener("change",function(){
+//     document.getElementById("text-hidden").value = JSON.stringify(file_uploader.files);
+// });
 
 
 
