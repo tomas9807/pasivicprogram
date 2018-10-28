@@ -17,18 +17,7 @@ def home():
 def archivos():
     title = 'ingresar archivos'
     if request.method=='POST':
-        if 'file' not in request.files:
-            flash('ingrese un archivo')
-            return redirect(request.url)
-        file = request.files['file']
-        if not file.filename:
-            flash('no ha seleccionado ningun archivo')
-            return redirect(request.url)
-        if allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
-        else:
-            flash('extension del archivo no permitada solo : xlsx,xls y csv')
-            return redirect(request.url)
- 
+        print(request.form)
+        return redirect(request.url)
+            
     return render_template('ingresar_archivos.html',title=title)
